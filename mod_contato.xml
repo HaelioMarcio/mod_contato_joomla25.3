@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>Formulário de Contato</name>
+    <author>Haelio Márcio</author>
+    <version>1.0.0</version>
+    <description>Simples formulário de contato com input Nome, Email, Assunto e Mensagem.
+        A cima do módulo você pode incluir um mapa do Google Maps apenas colocando a URL e determinar
+        seu tamanho em no Input HEIGHT.
+        
+        O módulo de contato está preparado para usa o Framework Bootstrap com as classes já denominadas.
+    </description>
+    <files>
+        <filename>mod_contato.xml</filename>
+        <filename module="mod_contato">mod_contato.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="bassic" label="Bassic Module Config">            
+                <field type="text" name="EMAIL_MOD_CONTATO" label="EMAIL DE REDIRECIONAMENTO: " default="" />
+                <field type="text" name="HEIGHT_MAP_MOD_CONTATO" label="ALTURA DO MAP: " default="300" />
+                <field type="textarea" name="TEXTO_MOD_CONTATO" label="TEXTO ACIMA DO FORM." default="" cols="5" rows="5" />
+                <field type="textarea" name="CODIGO_MAP_MOD_CONTATO" label="COD. MAPA GOOGLE IFRAME" default="" cols="5" rows="5" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
